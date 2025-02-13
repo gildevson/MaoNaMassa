@@ -28,10 +28,13 @@ public class Main {
         // Aumentar salário em 10%
         funcionarios.forEach(f -> f.aumentarSalario(10));
 
+        // Ordenar funcionários por nome em ordem alfabética
+        funcionarios.sort(Comparator.comparing(Funcionario::getNome));
+
         // Encontrar funcionário com maior idade
         Funcionario funcionarioMaisVelho = encontrarFuncionarioMaisVelho(funcionarios);
 
-        // Imprimir tabela de funcionários (Sem ordenar!)
+        // Imprimir tabela de funcionários (Ordenada alfabeticamente)
         imprimirTabela(funcionarios);
 
         // Imprimir funcionários que fazem aniversário em outubro e dezembro
