@@ -19,7 +19,7 @@ public class Main {
                 new Funcionario("Arthur", LocalDate.of(1993, 3, 31), new BigDecimal("4071.84"), "Contador"),
                 new Funcionario("Laura", LocalDate.of(1994, 7, 8), new BigDecimal("3017.45"), "Gerente"),
                 new Funcionario("Heloísa", LocalDate.of(2003, 5, 24), new BigDecimal("1606.85"), "Eletricista"),
-                new Funcionario("Helena", LocalDate.of(1996, 12, 2), new BigDecimal("2799.93"), "Gerente")
+                new Funcionario("Helena", LocalDate.of(1996, 9, 2), new BigDecimal("2799.93"), "Gerente")
         ));
 
         // Removendo João
@@ -28,13 +28,10 @@ public class Main {
         // Aumentar salário em 10%
         funcionarios.forEach(f -> f.aumentarSalario(10));
 
-        // Ordenar lista de funcionários por nome (Ordem alfabética)
-        funcionarios.sort(Comparator.comparing(Funcionario::getNome));
-
         // Encontrar funcionário com maior idade
         Funcionario funcionarioMaisVelho = encontrarFuncionarioMaisVelho(funcionarios);
 
-        // Imprimir tabela de funcionários
+        // Imprimir tabela de funcionários (Sem ordenar!)
         imprimirTabela(funcionarios);
 
         // Imprimir funcionários que fazem aniversário em outubro e dezembro
@@ -83,12 +80,12 @@ public class Main {
         BigDecimal salarioMinimo = new BigDecimal("1212.00");
         BigDecimal totalSalarios = BigDecimal.ZERO;
 
-        String formato = "| %-10s | %-12s | %-10s | %-10s | %-15s | %-8s |%n";
+        String formato = "| %-10s | %-12s | %-10s | %-10s | %-3s | %-15s | %-8s |%n";
 
-        System.out.println("+------------+--------------+------------+------------+-----------------+------------+");
-        System.out.printf("| %-10s | %-12s | %-10s | %-10s | %-15s | %-8s |%n",
-                "Nome", "Nascimento", "Salário", "Sal. 10%", "Função", "Sal.Mín.");
-        System.out.println("+------------+--------------+------------+------------+-----------------+------------+");
+        System.out.println("+------------+--------------+------------+------------+-----+-----------------+------------+");
+        System.out.printf("| %-10s | %-12s | %-10s | %-10s | %-3s | %-15s | %-8s |%n",
+                "Nome", "Nascimento", "Salário", "Sal. 10%", "Idade", "Função", "Sal.Mín.");
+        System.out.println("+------------+--------------+------------+------------+-----+-----------------+------------+");
 
         for (Funcionario f : funcionarios) {
             BigDecimal salarioAjustado = f.getSalario();
@@ -101,13 +98,14 @@ public class Main {
                     f.getDataNascimentoFormatada(),
                     String.format("%,.2f", salarioOriginal),
                     String.format("%,.2f", salarioAjustado),
+                    calcularIdade(f.getDataNascimento()),
                     f.getFuncao(),
                     qtdSalariosMinimos);
         }
 
-        System.out.println("+------------+--------------+------------+------------+-----------------+------------+");
-        System.out.printf("| %-44s | %-8s |%n", "Total de Funcionários: " + funcionarios.size(), "");
-        System.out.printf("| %-44s | %-8s |%n", "Total dos Salários: R$ " + String.format("%,.2f", totalSalarios), "");
-        System.out.println("+----------------------------------------------------------+");
+        System.out.println("+------------+--------------+------------+------------+-----+-----------------+------------+");
+        System.out.printf("| %-50s | %-8s |%n", "Total de Funcionários: " + funcionarios.size(), "");
+        System.out.printf("| %-50s | %-8s |%n", "Total dos Salários: R$ " + String.format("%,.2f", totalSalarios), "");
+        System.out.println("+---------------------------------------------------------------+");
     }
 }
