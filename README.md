@@ -66,7 +66,7 @@ A **classe principal** (`Main.java`) deve executar as seguintes ações:
 
 1️⃣ **Clone o repositório**
 ```bash
-git clone https://github.com/seu-usuario/teste-pratico-funcionarios.git
+https://github.com/gildevson/MaoNaMassa.git
 
 
 cd teste-pratico-funcionarios
