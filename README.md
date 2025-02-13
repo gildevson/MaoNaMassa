@@ -81,7 +81,7 @@ A **classe principal** (`Main.java`) executa as seguintes ações:
 
 1️⃣ **Clone o repositório**
 ```bash
-https://github.com/gildevson/MaoNaMassa.git
+git clone https://github.com/gildevson/MaoNaMassa.git
 ```
 2️⃣ **Acesse o diretório**
 ```bash
