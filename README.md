@@ -98,16 +98,54 @@ java -cp bin Main
 ## 📊 Exemplo de Saída Formatada
 
 ```
-+------------+--------------+------------+------------+-----------------+------------+------+ 
-| Nome       | Nascimento   | Salário    | Sal. 10%   | Função          | Sal.Mín.   | Idade | 
-+------------+--------------+------------+------------+-----------------+------------+------+ 
-| Maria      | 18/10/2000   | 2.009,44   | 2.210,38   | Operador        | 1,64       | 23   |
-| Caio       | 02/05/1961   | 9.836,14   | 10.819,75  | Coordenador     | 8,14       | 63   |
-| Miguel     | 14/10/1988   | 19.119,88  | 21.031,87  | Diretor         | 15,75      | 36   |
-| Alice      | 05/01/1995   | 2.234,68   | 2.458,15   | Recepcionista   | 1,84       | 29   |
-+------------+--------------+------------+------------+-----------------+------------+------+ 
-Total de Funcionários: 9
-Total dos Salários: R$ 51.932,50
++------------+--------------+------------+------------+-----+-----------------+------------+
+| Nome       | Nascimento   | Salário    | Sal. 10%   | Idade | Função          | Sal.Mín. |
++------------+--------------+------------+------------+-----+-----------------+------------+
+| Maria      | 18/10/2000   | 2.009,44   | 2.210,38   | 24  | Operador        | 1.82     |
+| Caio       | 02/05/1961   | 9.836,14   | 10.819,75  | 63  | Coordenador     | 8.93     |
+| Miguel     | 14/10/1988   | 19.119,88  | 21.031,87  | 36  | Diretor         | 17.35    |
+| Alice      | 05/01/1995   | 2.234,68   | 2.458,15   | 30  | Recepcionista   | 2.03     |
+| Heitor     | 19/11/1999   | 1.582,72   | 1.740,99   | 25  | Operador        | 1.44     |
+| Arthur     | 31/03/1993   | 4.071,84   | 4.479,02   | 31  | Contador        | 3.70     |
+| Laura      | 08/07/1994   | 3.017,45   | 3.319,20   | 30  | Gerente         | 2.74     |
+| Heloísa    | 24/05/2003   | 1.606,85   | 1.767,54   | 21  | Eletricista     | 1.46     |
+| Helena     | 02/09/1996   | 2.799,93   | 3.079,92   | 28  | Gerente         | 2.54     |
++------------+--------------+------------+------------+-----+-----------------+------------+
+| Total de Funcionários: 9                           |          |
+| Total dos Salários: R$ 50.906,82                   |          |
++---------------------------------------------------------------+
+
+Funcionários que fazem aniversário em outubro (10) e dezembro (12):
+Nome: Maria, Data de Nascimento: 18/10/2000
+Nome: Miguel, Data de Nascimento: 14/10/1988
+
+Funcionários agrupados por função:
+
+Função: Operador
+ - Maria (Salário: R$ 2.210,38)
+ - Heitor (Salário: R$ 1.740,99)
+
+Função: Eletricista
+ - Heloísa (Salário: R$ 1.767,54)
+
+Função: Recepcionista
+ - Alice (Salário: R$ 2.458,15)
+
+Função: Diretor
+ - Miguel (Salário: R$ 21.031,87)
+
+Função: Gerente
+ - Laura (Salário: R$ 3.319,20)
+ - Helena (Salário: R$ 3.079,92)
+
+Função: Coordenador
+ - Caio (Salário: R$ 10.819,75)
+
+Função: Contador
+ - Arthur (Salário: R$ 4.479,02)
+
+Funcionário com maior idade:
+Nome: Caio, Idade: 63 anos
 ```
 
 ### **📌 O que esse README inclui?**
